@@ -25,12 +25,19 @@ public class StepDefinition_MC extends CommonAPI {
 		WebDriver driver = CommonAPI.getDriver("CHROME", vBaseURL);
 		waitTime(15000);
 		scrolldown(driver, 300);
+		driver.findElement(By.name("param[homevalue]")).clear();
 		driver.findElement(By.name("param[homevalue]")).sendKeys("350000");
+		driver.findElement(By.name("param[principal]")).clear();
 		driver.findElement(By.name("param[principal]")).sendKeys("300000");
+		driver.findElement(By.name("param[interest_rate]")).clear();
 		driver.findElement(By.name("param[interest_rate]")).sendKeys("2.25");
+		driver.findElement(By.name("param[term]")).clear();
 		driver.findElement(By.name("param[term]")).sendKeys("15");
+		driver.findElement(By.name("param[property_tax]")).clear();
 		driver.findElement(By.name("param[property_tax]")).sendKeys(".5");
+		driver.findElement(By.name("param[pmi]")).clear();
 		driver.findElement(By.name("param[pmi]")).sendKeys("1.3");
+		driver.findElement(By.name("param[hoi]")).clear();
 		driver.findElement(By.name("param[hoi]")).sendKeys("2000");
 		waitTime(2000);
 		driver.findElement(By.name("cal")).click();
@@ -63,12 +70,19 @@ public class StepDefinition_MC extends CommonAPI {
 	public void enter_Many_Data_in_the_calculator_and_click_on_calculate_button(String vhomevalue, String vprincipal,
 			String vinterestRate, String vterm, String vproperty_tax, String vpmi, String vhoi) throws Throwable {
 		scrolldown(driver, 300);
+		driver.findElement(By.name("param[homevalue]")).clear();
 		driver.findElement(By.name("param[homevalue]")).sendKeys(vhomevalue);
+		driver.findElement(By.name("param[principal]")).clear();
 		driver.findElement(By.name("param[principal]")).sendKeys(vprincipal);
+		driver.findElement(By.name("param[interest_rate]")).clear();
 		driver.findElement(By.name("param[interest_rate]")).sendKeys(vinterestRate);
+		driver.findElement(By.name("param[term]")).clear();
 		driver.findElement(By.name("param[term]")).sendKeys(vterm);
+		driver.findElement(By.name("param[property_tax]")).clear();
 		driver.findElement(By.name("param[property_tax]")).sendKeys(vproperty_tax);
+		driver.findElement(By.name("param[pmi]")).clear();
 		driver.findElement(By.name("param[pmi]")).sendKeys(vpmi);
+		driver.findElement(By.name("param[hoi]")).clear();
 		driver.findElement(By.name("param[hoi]")).sendKeys(vhoi);
 		waitTime(2000);
 		driver.findElement(By.name("cal")).click();

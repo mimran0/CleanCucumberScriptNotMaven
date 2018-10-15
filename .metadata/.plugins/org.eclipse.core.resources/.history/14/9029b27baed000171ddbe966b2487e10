@@ -1,5 +1,0 @@
-package cucumber.features;
-
-public class StepDefinition_Common {
-
-}
